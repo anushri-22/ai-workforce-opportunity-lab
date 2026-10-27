@@ -2,74 +2,62 @@
 
 **From AI opportunity discovery to measurable business impact**
 
-An independent portfolio demonstration by Anushri Rajurkar for a Microsoft AI Workforce Digital Solution Specialist application. The customer, documents, prices and financial assumptions are fictional. This is not a Microsoft product or live Copilot Studio integration.
+[**Explore the interactive dashboard →**](https://anushri-22.github.io/ai-workforce-opportunity-lab/)
 
-## Why I built it
+## The opportunity
 
-AI investment decisions need more than a product demonstration. This lab shows how I would connect a business problem to discovery, solution fit, a measurable pilot and a responsible expansion decision. It draws on my experience designing AI pilots, building ROI-led cases, using adoption analytics and coordinating technical delivery.
+How can a mid-market organisation identify where AI could create value, build a credible business case and decide whether a pilot is ready to scale?
 
-## The customer problem and solution strategy
+This project explores that question through **Northstar Advisory**, a fictional UK professional-services company with 500 employees and a proposed 100-user AI pilot.
 
-Northstar Advisory is a fictional UK professional-services firm with 500 employees and a 100-user pilot. Fragmented knowledge, manual administration and slow customer responses create an opportunity to test productivity and service improvements. The lab compares in-context Microsoft 365 Copilot use cases with tailored Copilot Studio agent workflows, while recognising that other tools or ordinary automation may be a better fit. A real proposal needs licensing, security and technical validation.
+Its teams face a high administrative workload, fragmented internal knowledge and slow customer-response processes. Leaders need a way to assess opportunities, manage risks and measure value before investing in a wider rollout.
 
-## Explore the demonstration
+## What the lab demonstrates
 
-1. **Overview**: review the executive case and customer story.
-2. **Discovery**: change inputs to rank six use cases and inspect the scoring rules.
-3. **Simulated agent**: ask sample questions against three fictional documents or try an unsupported question. It is deterministic keyword matching, not a language model or retrieval system; always review source text and responses.
-4. **Value calculator**: change assumptions and compare scenarios. Capacity value is not guaranteed cash savings.
-5. **90-day roadmap**: examine owners, measures and decision gates.
-6. **Account strategy**: explore qualification, objections, partner roles, fit and risks.
-7. **Readiness**: score six equally weighted factors. This is not an academically validated instrument.
+The interactive application takes the customer through seven stages:
 
-## Technical architecture
+1. **Executive overview** — the customer’s challenges, AI opportunity and recommended starting point.
+2. **Opportunity discovery** — an assessment that ranks six use cases using transparent scoring rules.
+3. **Simulated knowledge agent** — a rule-based demonstration that uses fictional documents, provides source references and recommends human escalation when it cannot answer.
+4. **ROI calculator** — an editable model comparing productivity capacity, illustrative costs and first-year value across three scenarios.
+5. **90-day adoption roadmap** — pilot activities, accountable stakeholders, measures and decision gates.
+6. **Account strategy** — stakeholder discovery, qualification, objections, product fit, partner involvement and expansion planning.
+7. **AI adoption readiness** — an assessment of sponsorship, employee confidence, data, governance, processes and training.
 
-```mermaid
-flowchart LR
-  A[User inputs] --> B[React interface]
-  D[Local fictional JSON] --> B
-  B --> C[Rule-based agent and scoring]
-  B --> E[ROI calculations and charts]
-```
+## Microsoft solution strategy
 
-A potential production design could use Copilot Studio with approved permission-aware knowledge, Power Automate for controlled actions, and human review. Validate access controls, identity, governance, licensing and source quality first. This prototype does not implement those services.
+The lab explores where **Microsoft 365 Copilot** could support productivity within Microsoft 365 and where **Copilot Studio** could be considered for a tailored agent and workflow.
 
-## Run locally
+It also recognises that a different assistant, improved search or conventional automation may be a better choice depending on the customer’s requirements, environment and economics.
 
-Requires Node 20 or newer.
+A potential production design could use Copilot Studio with approved knowledge sources, Power Automate for controlled workflows, and human review. It would require customer-specific validation of permissions, governance, licensing and technical fit.
 
-```bash
-npm ci
-npm run dev
-npm run build
-npm run preview
-```
+## Business value
 
-No API keys, backend or secrets are required. Mock data lives in `src/data.json`. React, TypeScript, Vite, Tailwind CSS, Recharts and Lucide are used.
+The ROI calculator allows users to change assumptions including pilot size, adoption, time saved, licence cost, implementation cost and training investment.
 
-## Publish to GitHub Pages
+The model compares conservative, base and optimistic scenarios. It expresses benefits as **productivity capacity**, not guaranteed cash savings.
 
-1. Create a public GitHub repository named exactly `ai-workforce-opportunity-lab`.
-2. From the project directory run:
+## Technical overview
 
-```bash
-git init
-git add .
-git commit -m "Build AI Workforce Opportunity Lab"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/ai-workforce-opportunity-lab.git
-git push -u origin main
-```
+Built as a static, interactive application using:
 
-3. In GitHub repository **Settings → Pages → Build and deployment**, select **GitHub Actions**. If the first workflow ran before this setting was selected, rerun it from **Actions → Deploy to GitHub Pages**.
-4. Wait for the deployment job to succeed, then open `https://YOUR_USERNAME.github.io/ai-workforce-opportunity-lab/` and verify the application. Vite uses this repository base when `GITHUB_ACTIONS` is set; local preview and Sites use `/`.
+- **React and TypeScript** for the interface and application logic.
+- **Vite and Tailwind CSS** for the build and styling.
+- **Recharts** for scenario visualisation.
+- **Lucide** for icons.
+- **Local JSON** for fictional customer data and knowledge documents.
+- **GitHub Actions and GitHub Pages** for deployment.
 
-## ROI methodology and limitations
+The application runs without a backend or paid API key.
 
-Gross hours = licensed users × minutes saved ÷ 60 × working days × adoption. Effective hours = gross hours × realisation. Capacity value = effective hours × loaded hourly cost. Technology cost = users × monthly illustrative licence cost × 12. First-year cost includes technology, implementation and training. Net = capacity value − first-year cost; ROI = net ÷ first-year cost. Payback = upfront cost ÷ (monthly capacity value − monthly technology cost), when positive. All assumptions are editable; additional costs, taxes, benefits, displacement and actual cash savings require customer-specific validation. Scenarios adjust minutes, adoption and realisation; inspect the model for multipliers. The model is not a price quote or prediction.
+## Project limitations
 
-## About Anushri
+- Northstar Advisory, its documents and all financial assumptions are fictional.
+- The knowledge agent is a **rule-based simulation**. It is not connected to Copilot Studio or a live AI model.
+- The opportunity and readiness scores are illustrative decision-support tools; they are not academically validated or predictive.
+- The ROI model estimates productivity capacity, not guaranteed cash savings.
+- The licence cost is an illustrative assumption, not a statement of Microsoft pricing.
+- Microsoft product fit, licensing, permissions and governance would need to be validated for a real customer.
 
-Anushri Rajurkar combines customer-facing AI pilot and commercial experience with technical discovery, workflow automation and analytics. Her MSc research explored AI product adoption. The project is an illustrative approach, not evidence that she deployed Microsoft Copilot products.
-
-[LinkedIn](https://www.linkedin.com/in/anushri-r-3812a4156/) · [GitHub](https://github.com/anushri-22)
+This is an independent portfolio project and is not affiliated with Microsoft.
